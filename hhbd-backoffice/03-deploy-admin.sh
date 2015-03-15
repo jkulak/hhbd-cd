@@ -12,6 +12,7 @@ TIME_TAG=`date +"%y%m%d_%H%M%S"`
 PACKAGE_NAME=package-admin-$TIME_TAG.tar.gz
 
 # Compress all content of the directory
+cd admin
 tar -czf /tmp/$PACKAGE_NAME admin/*
 
 # Copy package

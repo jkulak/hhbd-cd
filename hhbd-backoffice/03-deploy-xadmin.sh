@@ -12,6 +12,7 @@ TIME_TAG=`date +"%y%m%d_%H%M%S"`
 PACKAGE_NAME=package-xadmin-$TIME_TAG.tar.gz
 
 # Compress all content of the directory
+cd xadmin
 tar -czf /tmp/$PACKAGE_NAME xadmin/*
 
 # Copy package
