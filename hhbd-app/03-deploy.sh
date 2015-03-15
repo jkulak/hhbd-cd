@@ -19,7 +19,7 @@ tar -czf /tmp/$PACKAGE_NAME *
 scp /tmp/$PACKAGE_NAME $TARGET_SERVER:/tmp
 
 # Run multiple commands over SSH
-ssh $DEPLOYMENT_USER@$TARGET_SERVER /bin/bash << EOF
+ssh $TARGET_SERVER /bin/bash << EOF
 
     # Create directory for new release
     mkdir $TARGET_DIR/releases/$TIME_TAG
