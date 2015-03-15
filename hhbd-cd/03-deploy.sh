@@ -10,6 +10,7 @@ echo "Copying deployment scripts where they belong (v. $TIME_TAG)"
 TARGET_DIR=/home/strider
 
 # Move scripts only to new release directory
+mkdir -p $TARGET_DIR/scripts/releases/$TIME_TAG
 mv hhbd-* $TARGET_DIR/scripts/releases/$TIME_TAG
 
 # Remove previous
