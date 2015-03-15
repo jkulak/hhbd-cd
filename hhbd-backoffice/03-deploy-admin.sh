@@ -13,7 +13,7 @@ PACKAGE_NAME=package-admin-$TIME_TAG.tar.gz
 
 # Compress all content of the directory
 cd admin
-tar -czf /tmp/$PACKAGE_NAME admin/*
+tar -czf /tmp/$PACKAGE_NAME *
 
 # Copy package
 scp /tmp/$PACKAGE_NAME $TARGET_SERVER:/tmp
