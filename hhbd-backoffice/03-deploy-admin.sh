@@ -15,6 +15,8 @@ PACKAGE_NAME=package-admin-$TIME_TAG.tar.gz
 cd admin
 tar -czf /tmp/$PACKAGE_NAME *
 
+mkdir -p smarty/templates_c
+
 # Copy package
 scp /tmp/$PACKAGE_NAME $TARGET_SERVER:/tmp
 

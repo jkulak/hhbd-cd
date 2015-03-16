@@ -15,6 +15,8 @@ PACKAGE_NAME=package-xadmin-$TIME_TAG.tar.gz
 cd xadmin
 tar -czf /tmp/$PACKAGE_NAME *
 
+mkdir -p smarty/templates_c
+
 # Copy package
 scp /tmp/$PACKAGE_NAME $TARGET_SERVER:/tmp
 
