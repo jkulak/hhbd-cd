@@ -6,3 +6,6 @@
 # Strider prepare hhbd-app script
 
 set -ex
+
+cd admin && composer install
+cd ../xadmin && composer install
