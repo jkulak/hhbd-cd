@@ -7,5 +7,4 @@
 
 set -ex
 
-cd admin && composer install
-cd ../xadmin && composer install
+cd xadmin && composer install
