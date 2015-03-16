@@ -15,8 +15,6 @@ PACKAGE_NAME=package-admin-$TIME_TAG.tar.gz
 cd admin
 tar -czf /tmp/$PACKAGE_NAME *
 
-mkdir -p smarty/templates_c
-
 # Copy package
 scp /tmp/$PACKAGE_NAME $TARGET_SERVER:/tmp
 
@@ -25,6 +23,8 @@ ssh $TARGET_SERVER /bin/bash << EOF
 
     # Create directory for new release
     mkdir $TARGET_DIR/releases/$TIME_TAG
+
+    mkdir -p $TARGET_DIR/releases/$TIME_TAG/smarty/templates_c
 
     # Extract package to new release directory
     tar xzf /tmp/$PACKAGE_NAME -C $TARGET_DIR/releases/$TIME_TAG
