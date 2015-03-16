@@ -30,6 +30,9 @@ ssh $TARGET_SERVER /bin/bash << EOF
     # Copy configuration from current
     cp $TARGET_DIR/releases/current/application/configs/application.ini $TARGET_DIR/releases/$TIME_TAG/application/configs/application.ini
 
+    # Copy .htaccess
+    cp $TARGET_DIR/releases/current/public/.htaccess $TARGET_DIR/releases/$TIME_TAG/public/.htaccess
+
     # Remove previous
     rm -r $TARGET_DIR/releases/previous
 
