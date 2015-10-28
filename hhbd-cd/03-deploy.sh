@@ -15,8 +15,6 @@ echo "Copying deployment scripts where they belong (v. $TIME_TAG)"
 
 TARGET_DIR=$1
 
-echo "TARGET_DIR: $TARGET_DIR"
-
 # Move scripts only to new release directory
 mkdir -p $TARGET_DIR/releases/$TIME_TAG
 mv hhbd-* $TARGET_DIR/releases/$TIME_TAG
